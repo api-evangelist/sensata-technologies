@@ -4,143 +4,43 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Sensata Technologies
 providerId: sensata-technologies
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
   - Sensors
-  - Electrical Protection
   - Industrial
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
+  - IoT
+  - Electrical Protection
+  - B2B
+description: Sensata Technologies is an industrial sensor and electrical-protection manufacturer. The
+  company does not operate a public developer program or self-serve API marketplace; software / data
+  integrations (e.g., Sensata IQ, fleet telemetry) are bundled into hardware contracts negotiated with
+  enterprise customers. No public API pricing is published.
+sources:
+  - https://www.sensata.com/
+notes: No public API pricing or self-serve plan tiers were reconcilable. Sensata's software and connectivity
+  services are sold attached to hardware as part of B2B industrial contracts.
 plans:
-  - id: sensata-technologies-free
-    name: Free
-    type: freemium
-    description: Free entry tier for the Sensata Technologies API surface. Intended for evaluation, prototyping,
-      and low-volume integrations. Real limits and pricing must be reconciled with the provider's published
-      plan documentation.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
-        timeFrame: month
-        geo: global
-        domains:
-          - https://api.sensata.com
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
-        geo: global
-        domains:
-          - https://api.sensata.com
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: Sensata Technologies API
-  - id: sensata-technologies-pro
-    name: Professional
-    type: paid
-    description: Production tier for Sensata Technologies. Provides higher quotas, priority support, and
-      access to the broader API portfolio. Pricing placeholder; align with the provider's pricing page.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
-        timeFrame: month
-        geo: global
-        domains:
-          - https://api.sensata.com
-        unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains:
-          - https://api.sensata.com
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
-        type: metered
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: global
-        domains:
-          - https://api.sensata.com
-        unit: 1000
-        price: TBD
-        userMultiplied: false
-    elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: Sensata Technologies API
-  - id: sensata-technologies-enterprise
-    name: Enterprise
+  - id: sensata-technologies-contact-sales
+    name: Contact Sales
     type: enterprise
-    description: Custom-negotiated tier for Sensata Technologies. Includes dedicated capacity, contractual
-      SLAs, security review, data residency options, and named technical account management.
+    description: Custom-negotiated agreement covering hardware, connectivity, and any software/API access
+      (e.g., Sensata IQ, Xirgo telematics platforms). API entitlements are scoped to the customer contract.
     entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
+      - label: Subscription
+        name: enterprise_subscription
+        type: subscription
+        metric: varies
         limit: -1
-        timeFrame: month
-        geo: configurable
-        domains:
-          - https://api.sensata.com
+        timeFrame: year
+        geo: global
         unit: 1
-        price: custom
-        userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains:
-          - https://api.sensata.com
-        unit: 1
-        price: custom
+        price: contact sales
         userMultiplied: false
     elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: Sensata Technologies API
+      - name: Hardware Bundle
+      - name: Connectivity Services
+      - name: Sensata IQ / Telematics Platform Access
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
