@@ -33,7 +33,7 @@ tags:
 description: >-
   Sensata Technologies is a major US corporation and Fortune 1000 company. The Sensata Technologies API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
 created: '2026-04-19'
-modified: '2026-04-19'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
   - aid: sensata-technologies:sensata-technologies-api
@@ -51,6 +51,8 @@ apis:
     description: >-
       The Sensata Technologies API provides access to platform services and data for enterprise integration and automation.
 common:
+  - url: https://www.sensata.com/newsroom
+    type: Blog
   - type: DomainSecurity
     url: security/sensata-technologies-domain-security.yml
   - type: LinkedIn
