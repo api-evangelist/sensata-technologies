@@ -51,6 +51,12 @@ apis:
     description: >-
       The Sensata Technologies API provides access to platform services and data for enterprise integration and automation.
 common:
+  - type: Plans
+    url: plans/sensata-technologies-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/sensata-technologies-rate-limits.yml
+  - type: FinOps
+    url: finops/sensata-technologies-finops.yml
   - url: https://www.sensata.com/newsroom
     type: Blog
   - type: DomainSecurity
